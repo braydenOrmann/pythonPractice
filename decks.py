@@ -1,4 +1,5 @@
 import random
+from cards import *
 
 #class for a standard deck of cards (no jokers)
 class standardDeck:
@@ -57,6 +58,14 @@ class standardDeck:
             card("queen", "clubs"),
             card("king", "clubs"),
             ]
-    def shuffle():
+    def shuffleDeck(self):
         random.shuffle(self.deck)
         print("Deck shuffled.")
+
+newDeck = standardDeck()
+for i in range (52):
+    print(newDeck.deck[i].value)
+
+newDeck.shuffleDeck()
+for i in range (52):
+    print(newDeck.deck[i].value)
